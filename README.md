@@ -1,50 +1,41 @@
 # Big Data Real Estate Analytics System
 
-1.Dự án xây dựng hệ thống thu thập, xử lý và phân tích dữ liệu bất động sản TP.HCM theo kiến trúc Data Lake.
-
-2.Hệ thống sử dụng:
-- Python để Crawl dữ liệu
-- MinIO làm Data Lake
-- Apache Spark để ETL
-- SQL Server làm Data Warehouse
-- Power BI trực quan hóa dữ liệu
-- ML
-
-3. Kiến trúc hệ thống
- Crawler
-    │
-    ▼
-MinIO (Bronze)
-    │
-    ▼
-Spark ETL
-    │
-    ▼
-Silver
-    │
-    ▼
-Spark ETL
-    │
-    ▼
-Gold
-    │
-    ▼
-SQL Server
-    │
-    ▼
-Power BI
-    │
-    ▼
-Train
-
+Python Crawler (Bất động sản)
+               │
+               ▼
+   MinIO - Bronze Layer ()
+               │
+               ▼
+         Apache Spark ETL ()
+               │
+               ▼
+   MinIO - Silver Layer ()
+               │
+               ▼
+         Apache Spark ETL ()
+               │
+               ▼
+   MinIO - Gold Layer () ──► [Export CSV cho Team ML]
+               │
+               ▼
+      (Spark JDBC Write)
+               │
+               ▼
+   SQL Server (Data Warehouse)
+               │
+               ▼
+         Power BI (Dashboard)
 4.
 Layer	Công nghệ
-Data Source	Mogi, Nhà Tốt, Kaggle
-Data Ingestion	Python Crawlers
-Data Lake	MinIO
-Storage Format	Parquet
-ETL Engine	Apache Spark
-Metadata	Parquet Schema
-Data Warehouse	SQL Server
-BI Tool	Power BI
+Data Source:	Mogi, Nhà Tốt, Kaggle
 
+Data Ingestion	Python : Crawlers
+Data Lake: 	MinIO
+Storage Format: 	Parquet
+ETL Engine: 	Apache Spark
+Metadata: 	Parquet Schema
+Data Warehouse:	SQL Server
+BI Tool:	Power BI
+ML : Collab
+
+Link dataset: https://drive.google.com/drive/folders/1JdPn7S0hUTdzLlXIZCuEFO-bJpZFHr61
