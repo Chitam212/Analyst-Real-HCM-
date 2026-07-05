@@ -37,3 +37,12 @@ BI Tool:	Power BI
 ML : Collab
 
 Link dataset: https://drive.google.com/drive/folders/1JdPn7S0hUTdzLlXIZCuEFO-bJpZFHr61
+
+4.
+Requirements
+Python 3.12+
+Java 8+
+Spark 3.5.1
+SQL Server 2022
+MinIO
+Power BI Desktop
