@@ -1,43 +1,7 @@
 # Big Data Real Estate Analytics System
 
-Python Crawler (Bất động sản)
-               │
-               ▼
-               
-   MinIO - Bronze Layer ()
-               │
-               ▼
-               
-         Apache Spark ETL ()
-               │
-               ▼
-               
-   MinIO - Silver Layer ()
-               │
-               ▼
+<img width="367" height="630" alt="image" src="https://github.com/user-attachments/assets/458460dc-8d70-40d8-8df3-f5cce13e3809" />
 
-               
-         Apache Spark ETL ()
-               │
-               ▼
-
-               
-   MinIO - Gold Layer () ──► [Export CSV cho Team ML]
-               │
-               ▼
-
-               
-      (Spark JDBC Write)
-               │
-               ▼
-
-               
-   SQL Server (Data Warehouse)
-               │
-               ▼
-
-               
-         Power BI (Dashboard)
 4.
 Layer	Công nghệ
 
